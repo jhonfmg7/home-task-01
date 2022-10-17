@@ -1,38 +1,122 @@
-.App {
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.component {
+  border: 1px solid #e1e1e1;
+  margin: 0 20px;
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button {
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 5px;
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* PURE COMPONENT */
+
+.select-input-container {
+  background-color: #232323;
+  padding: 30px;
+  position: relative;
+}
+
+.select-input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  background: rgba(50, 50, 50, 0.948044);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border-radius: 4px;
+  width: 525px;
+  height: 57px;
+  padding: 18px;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.select-input-row {
+  position: absolute;
+  right: 31.91%;
+  top: 45.84%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #F65261 transparent;
+  /* background: #F65261; */
+}
+
+.select-input::-ms-expand {
+  
+}
+
+/* FUNCTIONAL COMPONENT */
+
+.background-fc {
+  background-color: #232323;
+  padding: 30px;
+}
+
+.search-input {
+  width: 713px;
+  height: 57px;
+  border-radius: 4px;
+  margin-right: 14px;
+  background-color: #323232d5;
+  border: none;
+  padding: 25px!important;
+}
+
+.search-input::placeholder {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  /* line-height: 24px; */
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.search-button {
+  background-color: #F65261;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 4px;
+  width: 233px;
+  height: 57px;
+  text-transform: uppercase;
+  border: none;
 }
