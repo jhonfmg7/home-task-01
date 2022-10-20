@@ -1,17 +1,14 @@
 import React from "react";
 
+const genres = [
+    { title: "Crime", value: 0 },
+    { title: "Documentary", value: 1 },
+    { title: "Horror", value: 2 },
+    { title: "Comedy", value: 3 },
+]
+
 class PureComponent extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            genres: [
-                { title: "Crime", value: 0 },
-                { title: "Documentary", value: 1 },
-                { title: "Horror", value: 2 },
-                { title: "Comedy", value: 3 },
-            ]
-        };
-    }
+    constructor(props) {}
 
     render() {
         return (
@@ -20,8 +17,8 @@ class PureComponent extends React.PureComponent {
                 <div className="select-input-container">
                     <select className="select-input">
                         <option value="">Select Genre</option>
-                        { this.state.genres.map( item => (
-                            <option>{ item.title }</option>
+                        { genres.map( item => (
+                            <option key={ item.value } value={ item.value }>{ item.title }</option>
                         ) ) }
                     </select>
                     <div className="select-input-row"></div>
