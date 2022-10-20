@@ -11,7 +11,7 @@ class StateComponent extends React.Component {
     render() {
         return (
             <div className="component">
-                <h1 className="title">React Component</h1>
+                <h1 className="title">State Component</h1>
                 <p>Quantity: <strong>{ this.state.count }</strong></p>
                 <div className="buttons">
                     <button className="button" onClick={ () => this.setState( prevState => ({ count: prevState.count - 1 }) )}>-</button>
