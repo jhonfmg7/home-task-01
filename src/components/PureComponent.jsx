@@ -8,7 +8,9 @@ const genres = [
 ]
 
 class PureComponent extends React.PureComponent {
-    constructor(props) {}
+    constructor(props) {
+        super(props)
+    }
 
     render() {
         return (
